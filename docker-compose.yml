@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mysql:
+    image: openjdk-test:1.0.0
+    container_name: jdk-test
+    restart: always
+    environment:
+      CN: "*.test.ssl.com"
+      NAME: "test-ssl"
+    volumes:
+      - ./export/:/opt/export/  
+
